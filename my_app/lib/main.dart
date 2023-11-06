@@ -114,6 +114,10 @@ class _MyHomePageState extends State<MyHomePage> {
               'Nicolás Ríos',
               style: Theme.of(context).textTheme.bodyMedium,
             ),
+            Text(
+              'Aarón Montoya',
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
           ],
         ),
       ),
