@@ -14,73 +14,157 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // Color color = Theme.of(context).primaryColor;
 
-    Widget textSection = Container(
-      padding: const EdgeInsets.all(32),
-      child: const Text(
-        'biomater.ia es un grupo de investigación apoyado por Factoría UDP,'
-        'que está creando una plataforma digital para el desarrollo de'
-        'biomateriales basados en inteligencia artificial',
-        softWrap: true,
-      ),
-    );
+    // Widget textSection = Container(
+    //   padding: const EdgeInsets.all(32),
+    //   child: const Text(
+    //     'biomater.ia es un grupo de investigación apoyado por Factoría UDP, '
+    //     'que está creando una plataforma digital para el desarrollo de '
+    //     'biomateriales basados en inteligencia artificial',
+    //     softWrap: true,
+    //   ),
+    // );
 
     Widget integrantesSection = Container(
       padding: const EdgeInsets.all(32),
+      margin: const EdgeInsets.all(5),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text(
-            'Integrantes',
-            style: Theme.of(context).textTheme.headlineMedium,
+          const Text(
+            'biomater.ia es un grupo de investigación apoyado por Factoría UDP, '
+            'que está creando una plataforma digital para el desarrollo de '
+            'biomateriales basados en inteligencia artificial\n\n',
+            softWrap: true,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 32,
+            ),
           ),
-          Text(
-            'Claudio Fredes',
-            style: Theme.of(context).textTheme.bodyMedium,
+          Image.asset(
+            'images/IMG_5862.jpg',
+            // width: BoxFit.,
+            // height: 240,
+            fit: BoxFit.fitHeight,
           ),
-          Text(
-            'Martín Gutiérrez',
-            style: Theme.of(context).textTheme.bodyMedium,
+          const Text(
+            'Nuestro equipo es altamente multidisciplinario, '
+            'con especialistas de diversas áreas, incluyendo biología, diseño,'
+            'ingeniería y educación\n\n',
+            softWrap: true,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 32,
+            ),
           ),
-          Text(
-            'Margarita Talep',
-            style: Theme.of(context).textTheme.bodyMedium,
+
+          Image.asset(
+            'images/equipo.png',
+            // width: BoxFit.,
+            // height: 240,
+            fit: BoxFit.fitHeight,
           ),
-          Text(
-            'Vania Tapia',
-            style: Theme.of(context).textTheme.bodyMedium,
+
+          const Text(
+            'Estamos desarrollando apps y software para recorrer el espacio '
+            'latente de biomateriales creados con asistencia de inteligencia '
+            'artificial.\n\n',
+            // style: Theme.of(context).textTheme.displaySmall,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 32,
+            ),
           ),
-          Text(
-            'Nicolás Ríos',
-            style: Theme.of(context).textTheme.bodyMedium,
+          Image.asset(
+            'images/app.jpg',
+            // width: BoxFit.,
+            // height: 240,
+            fit: BoxFit.fitHeight,
           ),
-          Text(
-            'Aarón Montoya',
-            style: Theme.of(context).textTheme.bodyMedium,
+          // Text(
+          //   'Claudio Fredes',
+          //   style: Theme.of(context).textTheme.bodyMedium,
+          // ),
+          // Text(
+          //   'Martín Gutiérrez',
+          //   style: Theme.of(context).textTheme.bodyMedium,
+          // ),
+          // Text(
+          //   'Margarita Talep',
+          //   style: Theme.of(context).textTheme.bodyMedium,
+          // ),
+          // Text(
+          //   'Vania Tapia',
+          //   style: Theme.of(context).textTheme.bodyMedium,
+          // ),
+          // Text(
+          //   'Nicolás Ríos',
+          //   style: Theme.of(context).textTheme.bodyMedium,
+          // ),
+          // Text(
+          //   'Aarón Montoya',
+          //   style: Theme.of(context).textTheme.bodyMedium,
+          // ),
+          const Text(
+            'Estamos en instagram como @biomater.ia\n\n',
+            softWrap: true,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 32,
+            ),
           ),
         ],
       ),
     );
 
-    Widget contactoSection = Container(
-      padding: const EdgeInsets.all(32),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            'Contacto',
-            style: Theme.of(context).textTheme.headlineMedium,
-          ),
-          Text(
-            'instagram.com/biomater.ia',
-            style: Theme.of(context).textTheme.bodyMedium,
-          ),
-        ],
-      ),
-    );
+    // Widget contactoSection = Container(
+    //   padding: const EdgeInsets.all(32),
+    //   child: Column(
+    //     mainAxisAlignment: MainAxisAlignment.center,
+    //     children: <Widget>[
+    //       Text(
+    //         'Contacto',
+    //         style: Theme.of(context).textTheme.headlineMedium,
+    //       ),
+    //       Text(
+    //         'instagram.com/biomater.ia',
+    //         style: Theme.of(context).textTheme.bodyMedium,
+    //       ),
+    //     ],
+    //   ),
+    // );
 
     return MaterialApp(
       title: 'biomater.ia',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          scaffoldBackgroundColor: Colors.black,
+          colorScheme: ColorScheme.fromSwatch(
+            primarySwatch: Colors.blue,
+          ).copyWith(
+            secondary: const Color(0xFF1B1C22),
+          ),
+          textTheme: const TextTheme(
+            headlineMedium: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+            bodyMedium: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+            displaySmall: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          )),
+      // textTheme: Theme.of(context).textTheme.apply(
+      // bodyColor: Colors.white,
+      // displayColor: Colors.white,
+      // displaySmall: ,
+      // )),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('biomater.ia'),
@@ -88,14 +172,14 @@ class MyApp extends StatelessWidget {
         body: ListView(
           children: [
             Image.asset(
-              'images/lake.jpg',
-              width: 600,
-              height: 240,
+              'images/ecosistema.png',
+              // width: 600,
+              // height: 240,
               fit: BoxFit.cover,
             ),
-            textSection,
+            // textSection,
             integrantesSection,
-            contactoSection,
+            // contactoSection,
           ],
         ),
       ),
