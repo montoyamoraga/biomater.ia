@@ -25,13 +25,14 @@ class MyApp extends StatelessWidget {
     // );
 
     Widget integrantesSection = Container(
+      color: Colors.black,
       padding: const EdgeInsets.all(32),
       margin: const EdgeInsets.all(5),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           const Text(
-            'biomater.ia es un grupo de investigación apoyado por Factoría UDP, '
+            '\n\nbiomater.ia es un grupo de investigación apoyado por Factoría UDP, '
             'que está creando una plataforma digital para el desarrollo de '
             'biomateriales basados en inteligencia artificial\n\n',
             softWrap: true,
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
             fit: BoxFit.fitHeight,
           ),
           const Text(
-            'Nuestro equipo es altamente multidisciplinario, '
+            '\n\nNuestro equipo es altamente multidisciplinario, '
             'con especialistas de diversas áreas, incluyendo biología, diseño,'
             'ingeniería y educación\n\n',
             softWrap: true,
@@ -65,7 +66,7 @@ class MyApp extends StatelessWidget {
           ),
 
           const Text(
-            'Estamos desarrollando apps y software para recorrer el espacio '
+            '\n\nEstamos desarrollando apps y software para recorrer el espacio '
             'latente de biomateriales creados con asistencia de inteligencia '
             'artificial.\n\n',
             // style: Theme.of(context).textTheme.displaySmall,
@@ -105,7 +106,7 @@ class MyApp extends StatelessWidget {
           //   style: Theme.of(context).textTheme.bodyMedium,
           // ),
           const Text(
-            'Estamos en instagram como @biomater.ia\n\n',
+            '\n\nEstamos en instagram como @biomater.ia\n\n',
             softWrap: true,
             style: TextStyle(
               color: Colors.white,
@@ -138,8 +139,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           scaffoldBackgroundColor: Colors.black,
+          // backgroundColor: Colors.black,
           colorScheme: ColorScheme.fromSwatch(
             primarySwatch: Colors.blue,
+            // primarySwatch: Colors.blue,
           ).copyWith(
             secondary: const Color(0xFF1B1C22),
           ),
@@ -160,11 +163,6 @@ class MyApp extends StatelessWidget {
               color: Colors.white,
             ),
           )),
-      // textTheme: Theme.of(context).textTheme.apply(
-      // bodyColor: Colors.white,
-      // displayColor: Colors.white,
-      // displaySmall: ,
-      // )),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('biomater.ia'),
